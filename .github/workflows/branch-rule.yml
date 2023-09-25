@@ -1,0 +1,26 @@
+name: Branch Creation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  branch_creation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Branch Name
+        id: check_branch_name
+        run: |
+          branch_name="${GITHUB_REF#refs/heads/}"
+          if ! [[ "$branch_name" =~ ^(main|master|(feat|test|docs|refactor|style|remove|(bug|hot)fix))\/[0-9]+-[a-zA-Z0-9]+([-_][a-zA-Z0-9]+)*$ ]]; then
+            echo "Error: Invalid branch name format"
+            exit 1
+          fi
+          
+      - name: Create Branch
+        if: success() && steps.check_branch_name.outputs
+        run: |
+          branch_name="${GITHUB_REF#refs/heads/}"
+          git checkout -b "$branch_name"
+          git push origin "$branch_name"
