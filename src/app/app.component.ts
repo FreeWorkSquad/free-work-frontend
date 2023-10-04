@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'free-work-frontend';
+  imagePath: string = "../assets/image/lego.jpg";
+
+  open: string = '출근';
+  close: string = "퇴근";
 }

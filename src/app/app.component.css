@@ -1,0 +1,19 @@
+#background-size {
+    width: 192px;
+    height: 320px;
+    padding: 5px;
+    border: gray dotted 2px;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-10 {
+    margin: 10px;
+}

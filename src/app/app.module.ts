@@ -5,9 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
+import { BtnComponent } from '../components/btn/btn.component';
+import { ImageComponent } from '../components/image/image.component';
+import { FavoritesComponent } from '../components/favorites/favorites.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, BtnComponent, ImageComponent, FavoritesComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [BtnComponent, ImageComponent, FavoritesComponent]
 })
 export class AppModule { }
