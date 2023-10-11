@@ -1,9 +1,9 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule, isDevMode} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { BtnComponent } from '../components/btn/btn.component';
 import { ImageComponent } from '../components/image/image.component';
@@ -20,10 +20,13 @@ import { FavoritesComponent } from '../components/favorites/favorites.component'
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   bootstrap: [AppComponent],
   providers: [BtnComponent, ImageComponent, FavoritesComponent]
 })
-export class AppModule { }
+/**
+ * AppModule
+ */
+export class AppModule {}
