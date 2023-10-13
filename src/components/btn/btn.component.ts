@@ -7,5 +7,13 @@ import {Component, Input} from '@angular/core';
 })
 export class BtnComponent {
   @Input()
-  public text: string | undefined;
+    public text: string | undefined;
+  @Input()
+    public width: string | undefined;
+  @Input()
+    public height: string | undefined;
+  @Input()
+    public backgroundColor: string | undefined;
+  @Input()
+    public textColor: string | undefined;
 }
