@@ -8,10 +8,11 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {BtnComponent} from '../components/btn/btn.component';
 import {ImageComponent} from '../components/image/image.component';
 import {FavoritesComponent} from '../components/favorites/favorites.component';
+import {AlertComponent} from '../components/alert/alert.component';
 
 @NgModule({
   declarations: [
-    AppComponent, BtnComponent, ImageComponent, FavoritesComponent
+    AppComponent, BtnComponent, ImageComponent, FavoritesComponent, AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,7 @@ import {FavoritesComponent} from '../components/favorites/favorites.component';
     })
   ],
   bootstrap: [AppComponent],
-  providers: [BtnComponent, ImageComponent, FavoritesComponent]
+  providers: [BtnComponent, ImageComponent, FavoritesComponent, AlertComponent]
 })
 /**
  * AppModule

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'freework-root',
@@ -8,9 +8,28 @@ import {Component} from '@angular/core';
 /**
  * AppComponent
  */
-export class AppComponent {
-  imagePath = '../assets/image/lego.jpg';
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    if (!this.onWorkState) {
+      this.imagePath = '../assets/image/workend.png';
+    } else {
+      this.imagePath = '../assets/image/working.png';
+    }
+  }
+
+  onWorkState = false;
+  imagePath = '';
+  workingImage = '../assets/image/working.png';
+  workEndImage = '../assets/image/workend.png';
 
   open = '출근';
   close = '퇴근';
+
+  workStart() {
+    this.imagePath = this.workingImage;
+  }
+
+  workEnd() {
+    this.imagePath = this.workEndImage;
+  }
 }
