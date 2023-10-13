@@ -1,16 +1,16 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'freework-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 /**
  * AppComponent
  */
 export class AppComponent {
-  imagePath: string = "../assets/image/lego.jpg";
+  imagePath = '../assets/image/lego.jpg';
 
-  open: string = '출근';
-  close: string = "퇴근";
+  open = '출근';
+  close = '퇴근';
 }
