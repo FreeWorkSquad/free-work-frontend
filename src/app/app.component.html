@@ -1,17 +1,30 @@
-<div id="background-size">
-    <div class="center">
-        <freework-favorites class="margin-5" [icon]="'★'"></freework-favorites>
-        <freework-favorites class="margin-5" [icon]="'☆'"></freework-favorites>
-        <freework-favorites class="margin-5" [icon]="'※'"></freework-favorites>
-        <freework-favorites class="margin-5" [icon]="'◎'"></freework-favorites>
-    </div>
-
-    <hr/>
-    <freework-image [imagePath]="imagePath"></freework-image>
-    <hr/>
+<mat-drawer-container class="center height-100">
+    <mat-drawer #drawer mode="over">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showSideMenu">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showSideMenu = !showSideMenu" mat-raised-button>
+            Toggle extra text
+        </button>
+    </mat-drawer>
     
-    <div class="center">
-        <freework-btn class="margin-5" [width]="'120px'" [height]="'40px'" [backgroundColor]="'#A9E2F3'" [text]="open" (click)="workStart()"></freework-btn>
-        <freework-btn class="margin-5" [width]="'120px'" [height]="'40px'" [text]="close" (click)="workEnd()"></freework-btn>
-    </div>
-</div>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button aria-label="Menu" (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Wisenut</span>
+        </mat-toolbar>
+
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">Bold</mat-button-toggle>
+            <mat-button-toggle value="italic">Italic</mat-button-toggle>
+            <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        <br/>
+    
+        <freework-image [imagePath]="imagePath"></freework-image>
+        <br/>
+    
+        <mat-slide-toggle #workSwitch [aria-label]="'work-in-out'" (click)="workInOut()"></mat-slide-toggle>
+    </mat-drawer-content>
+</mat-drawer-container>
