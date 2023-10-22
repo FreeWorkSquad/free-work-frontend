@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --aot --service-worker",
+    "build-test": "ng build --aot --service-worker --base-href /freework/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
