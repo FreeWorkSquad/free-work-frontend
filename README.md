@@ -45,3 +45,13 @@ After build, deploy file path `/dist`. And is starting from NginX.
 ```bash
 npm run build
 ```
+
+### Docker Build & Push
+
+```bash
+docker build -t freework-frontend:latest .
+```
+
+```bash
+docker run -d -p 80:80 freework-frontend:latest
+```
