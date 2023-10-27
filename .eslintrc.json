@@ -16,11 +16,14 @@
       ],
       "rules": {
         "new-cap": "off",
+        "max-len": "off",
+        "require-jsdoc": "off",
+        "comma-dangle": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "freework",
             "style": "camelCase"
           }
         ],
@@ -28,7 +31,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "freework",
             "style": "kebab-case"
           }
         ]
