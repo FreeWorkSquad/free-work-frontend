@@ -46,12 +46,18 @@ After build, deploy file path `/dist`. And is starting from NginX.
 npm run build
 ```
 
-### Docker Build & Push
+## Docker Setting
 
 ```bash
-docker build -t freework-frontend:latest .
+docker build -t ghcr.io/freeworksquad/freework-frontend:latest .
 ```
 
+### Push
 ```bash
-docker run -d -p 80:80 freework-frontend:latest
+docker push ghcr.io/freeworksquad/freework-frontend:latest
+```
+
+### Run
+```bash
+docker run -d -p 80:80 ghcr.io/freeworksquad/freework-frontend:latest
 ```
