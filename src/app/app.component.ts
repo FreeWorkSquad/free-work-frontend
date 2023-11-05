@@ -45,7 +45,15 @@ export class AppComponent implements OnInit {
   workInOut() {
     navigator.geolocation.getCurrentPosition(
         (position) => this.workInOutEvent(position),
-        (error) => alert("GPS 위치를 잡을 수 없습니다.")
+        (error) => alert("GPS 위치를 잡을 수 없어 출퇴근을 기록할 수 없습니다.")
     );
+  }
+
+  favorit(func: Number) {
+    switch(func) {
+      case 1: alert("출퇴근 메뉴로 이동합니다."); return;
+      case 2: alert("휴가 메뉴로 이동합니다."); return;
+      default: alert("앱에 오류가 발생하였습니다. 잠시 후 다시 시도해주세요"); return;
+    }
   }
 }

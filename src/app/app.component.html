@@ -1,10 +1,9 @@
 <mat-drawer-container class="center height-100">
     <mat-drawer #drawer mode="over">
-        <p>Auto-resizing sidenav</p>
-        <p *ngIf="showSideMenu">Lorem, ipsum dolor sit amet consectetur.</p>
-        <button (click)="showSideMenu = !showSideMenu" mat-raised-button>
-            Toggle extra text
-        </button>
+        <div class="freework-side-menu" cdkMenu>
+            <button class="freework-side-menu-item" cdkMenuItem>출퇴근</button>
+            <button class="freework-side-menu-item" cdkMenuItem>휴가</button>
+        </div>
     </mat-drawer>
     
     <mat-drawer-content>
@@ -14,13 +13,19 @@
             </button>
             <span>Wisenut</span>
         </mat-toolbar>
-
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle value="bold">Bold</mat-button-toggle>
-            <mat-button-toggle value="italic">Italic</mat-button-toggle>
-            <mat-button-toggle value="underline">Underline</mat-button-toggle>
-        </mat-button-toggle-group>
-        <br/>
+        
+        <div class="margin-5">
+            <button class="margin-5" mat-mini-fab matTooltip="Accent" color="primary" 
+                aria-label="Example mini fab with a heart icon"
+                (click)="favorit(1)">
+                <mat-icon>apartment</mat-icon>
+            </button>
+            <button class="margin-5" mat-mini-fab matTooltip="Accent" color="accent"
+                aria-label="Example mini fab with a heart icon"
+                (click)="favorit(2)">
+                <mat-icon>flight</mat-icon>
+            </button>
+        </div>
     
         <freework-image [imagePath]="imagePath"></freework-image>
         <br/>
