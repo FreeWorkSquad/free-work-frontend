@@ -1,8 +1,8 @@
 export class GeoLocation {
-  longitude: Number = 37.566535;
-  latitude: Number = 126.9779692;
+  longitude = 37.566535;
+  latitude = 126.9779692;
 
-  set(longitude: Number, latitude: Number) {
+  set(longitude: number, latitude: number) {
     this.longitude = longitude;
     this.latitude = latitude;
   }
@@ -11,7 +11,7 @@ export class GeoLocation {
     return {
       longitude: this.longitude,
       latitude: this.latitude
-    }
+    };
   }
 
   getLongitude() {

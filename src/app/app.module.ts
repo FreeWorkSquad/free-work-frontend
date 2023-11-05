@@ -36,7 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    CdkMenu,CdkMenuItem,
+    CdkMenu, CdkMenuItem,
     MatButtonToggleModule,
     MatButtonModule,
     MatIconModule,
