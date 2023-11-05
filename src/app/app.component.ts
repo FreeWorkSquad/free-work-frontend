@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {GeoLocation, GeoLocation_DEFAULT} from '../service/gps/vo/geo-location';
-import {Attendance} from '../service/attendance/attendance'
+import {GeoLocation, GeoLocationDefault} from '../service/gps/vo/geo-location';
+import {Attendance} from '../service/attendance/attendance';
 
 @Component({
   selector: 'freework-root',
@@ -13,7 +13,7 @@ import {Attendance} from '../service/attendance/attendance'
  */
 export class AppComponent implements OnInit {
   constructor(httpClient: HttpClient) {
-    this.geoLocation = new GeoLocation(GeoLocation_DEFAULT.LONGITUDE, GeoLocation_DEFAULT.LATITUDE);
+    this.geoLocation = new GeoLocation(GeoLocationDefault.LONGITUDE, GeoLocationDefault.LATITUDE);
     this.attendance = new Attendance(httpClient);
   }
 

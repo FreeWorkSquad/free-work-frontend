@@ -1,4 +1,4 @@
-export const GeoLocation_DEFAULT = {
+export const GeoLocationDefault = {
   LONGITUDE: 37.566535,
   LATITUDE: 126.9779692
 };
