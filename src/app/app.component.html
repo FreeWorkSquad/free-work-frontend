@@ -1,8 +1,8 @@
 <mat-drawer-container class="center height-100">
     <mat-drawer #drawer mode="over">
         <div class="freework-side-menu" cdkMenu>
-            <button class="freework-side-menu-item" cdkMenuItem>출퇴근</button>
-            <button class="freework-side-menu-item" cdkMenuItem>휴가</button>
+            <button class="freework-side-menu-item" cdkMenuItem routerLink="home">출퇴근</button>
+            <button class="freework-side-menu-item" cdkMenuItem routerLink="simple-join">휴가</button>
         </div>
     </mat-drawer>
     
@@ -14,22 +14,8 @@
             <span>Wisenut</span>
         </mat-toolbar>
         
-        <div class="margin-5">
-            <button class="margin-5" mat-mini-fab matTooltip="Accent" color="primary" 
-                aria-label="Example mini fab with a heart icon"
-                (click)="favorit(1)">
-                <mat-icon>apartment</mat-icon>
-            </button>
-            <button class="margin-5" mat-mini-fab matTooltip="Accent" color="accent"
-                aria-label="Example mini fab with a heart icon"
-                (click)="favorit(2)">
-                <mat-icon>flight</mat-icon>
-            </button>
-        </div>
-    
-        <freework-image [imagePath]="imagePath"></freework-image>
-        <br/>
-    
-        <mat-slide-toggle #workSwitch [aria-label]="'work-in-out'" (click)="workInOut()"></mat-slide-toggle>
+        <!-- Main Contents -->
+        <router-outlet></router-outlet>
+
     </mat-drawer-content>
 </mat-drawer-container>

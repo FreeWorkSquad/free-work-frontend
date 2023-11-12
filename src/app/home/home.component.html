@@ -1,0 +1,17 @@
+<div class="margin-5">
+	<button class="margin-5" mat-mini-fab matTooltip="Accent" color="primary" 
+		aria-label="Example mini fab with a heart icon"
+		routerLink="/home">
+		<mat-icon>apartment</mat-icon>
+	</button>
+	<button class="margin-5" mat-mini-fab matTooltip="Accent" color="accent"
+		aria-label="Example mini fab with a heart icon"
+		routerLink="/simple-join">
+		<mat-icon>flight</mat-icon>
+	</button>
+</div>
+
+<freework-image [imagePath]="imagePath"></freework-image>
+<br/>
+
+<mat-slide-toggle #workSwitch [aria-label]="'work-in-out'" (click)="workInOut()"></mat-slide-toggle>
