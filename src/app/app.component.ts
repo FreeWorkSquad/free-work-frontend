@@ -9,4 +9,5 @@ import {Component} from '@angular/core';
  * AppComponent
  */
 export class AppComponent  {
+  title: string = "free-work-frontend"
 }
