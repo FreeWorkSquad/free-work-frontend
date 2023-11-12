@@ -21,13 +21,13 @@ export class SimpleJoinComponent {
   }
 
   memberApi: MemberApi;
-  name: string = "";
-  id: string = "";
-  password: string = "";
-  email: string = "";
+  name = '';
+  id = '';
+  password = '';
+  email = '';
 
   join(): void {
     const temp = this.memberApi.join(this.name, this.id, this.password, this.email);
-    temp.subscribe( (res) => console.log(res) )
+    temp.subscribe( (res) => console.log(res) );
   }
 }

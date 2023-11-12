@@ -8,6 +8,6 @@ import {Component} from '@angular/core';
 /**
  * AppComponent
  */
-export class AppComponent  {
-  title: string = "free-work-frontend"
+export class AppComponent {
+  title = 'free-work-frontend';
 }

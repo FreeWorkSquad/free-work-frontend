@@ -26,7 +26,7 @@ export class Attendance {
                 'jskang', new GeoLocation(position.coords.longitude, position.coords.latitude)
             ),
             {
-              headers: new HttpHeaders({"x-token": X_TOKEN})
+              headers: new HttpHeaders({'x-token': X_TOKEN})
             }
         )
         .subscribe(
@@ -42,7 +42,7 @@ export class Attendance {
                 'jskang', new GeoLocation(position.coords.longitude, position.coords.latitude)
             ),
             {
-              headers: new HttpHeaders({"x-token": X_TOKEN})
+              headers: new HttpHeaders({'x-token': X_TOKEN})
             }
         )
         .subscribe(

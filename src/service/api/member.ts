@@ -23,12 +23,12 @@ export class MemberApi {
 
   join = (name: string, id: string, password: string, email: string) => {
     return this.httpClient
-      .post(
-        BaseUrl+ '/member',
-        new MemberSimpleVo(name, id, password, email),
-        {
-          headers: new HttpHeaders({"x-token": X_TOKEN})
-        }
-      );
+        .post(
+            BaseUrl+ '/member',
+            new MemberSimpleVo(name, id, password, email),
+            {
+              headers: new HttpHeaders({'x-token': X_TOKEN})
+            }
+        );
   };
 }

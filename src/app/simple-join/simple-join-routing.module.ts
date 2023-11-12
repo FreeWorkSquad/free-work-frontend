@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {SimpleJoinComponent} from './simple-join.component';
 
 const routes: Routes = [
-  { path: '', component: SimpleJoinComponent }
+  {path: '', component: SimpleJoinComponent}
 ];
 
 @NgModule({
