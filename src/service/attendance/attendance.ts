@@ -17,7 +17,7 @@ export class Attendance {
   constructor(private httpClient: HttpClient) {}
 
   // TODO: BASE URL 은 추후에 env 파일 형태로 외부에서 주입 가능하도록 변경 필요.
-  baseUrl = 'http://192.168.75.29:8000';
+  baseUrl = 'http://146.56.98.103:8000';
 
   checkIn = (position: GeolocationPosition) => {
     this.httpClient
