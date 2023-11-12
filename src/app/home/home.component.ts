@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {HttpClient} from '@angular/common/http';
 import {GeoLocation, GeoLocationDefault} from '../../service/gps/vo/geo-location';
-import {Attendance} from '../../service/api/attendance';
+import {Attendance} from 'src/service/api/attendance';
 
 @Component({
   selector: 'freework-home',

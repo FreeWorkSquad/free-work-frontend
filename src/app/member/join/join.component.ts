@@ -10,12 +10,12 @@ import {MemberApi} from 'src/service/api/member';
 
 @Component({
   selector: 'freework-simple-join',
-  templateUrl: './simple-join.component.html',
-  styleUrls: ['./simple-join.component.css'],
+  templateUrl: './join.component.html',
+  styleUrls: ['./join.component.css'],
   standalone: true,
   imports: [FormsModule, HttpClientModule, MatFormFieldModule, MatInputModule, MatButtonModule],
 })
-export class SimpleJoinComponent {
+export class MemberJoinComponent {
   constructor(httpClient: HttpClient) {
     this.memberApi = new MemberApi(httpClient);
   }

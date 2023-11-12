@@ -14,11 +14,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {AlertComponent} from '../components/alert/alert.component';
 
 @NgModule({
   declarations: [
-    AppComponent, AlertComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +38,6 @@ import {AlertComponent} from '../components/alert/alert.component';
     MatSlideToggleModule,
   ],
   bootstrap: [AppComponent],
-  providers: [
-    AlertComponent
-  ]
 })
 /**
  * AppModule

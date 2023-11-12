@@ -3,8 +3,9 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'simple-join', loadChildren: () => import('./simple-join/simple-join-routing.module').then((m) => m.SimpleJoinRoutingModule)},
-  {path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)}
+  {path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)},
+  {path: 'simple-join', loadChildren: () => import('./member/join/join-routing.module').then((m) => m.MemberJoinRoutingModule)},
+  {path: 'update-join', loadChildren: () => import('./member/update/update-routing.module').then((m) => m.MemberUpdateRoutingModule)},
 ];
 
 @NgModule({

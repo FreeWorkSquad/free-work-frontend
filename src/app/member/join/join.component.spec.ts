@@ -1,16 +1,16 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SimpleJoinComponent} from './simple-join.component';
+import {MemberJoinComponent} from './join.component';
 
 describe('SimpleJoinComponent', () => {
-  let component: SimpleJoinComponent;
-  let fixture: ComponentFixture<SimpleJoinComponent>;
+  let component: MemberJoinComponent;
+  let fixture: ComponentFixture<MemberJoinComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SimpleJoinComponent]
+      declarations: [MemberJoinComponent]
     });
-    fixture = TestBed.createComponent(SimpleJoinComponent);
+    fixture = TestBed.createComponent(MemberJoinComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
